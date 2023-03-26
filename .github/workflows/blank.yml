@@ -36,6 +36,7 @@ jobs:
           echo test, and deploy your project.
   other:
       runs-on: ubuntu-latest
+      needs : [build]
       steps:
         - name: Simple job running in parallel 
           run: echo this is running at the same time as build
